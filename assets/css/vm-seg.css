@@ -71,3 +71,8 @@
   .steps::before{transform:none;transition:none}
   .vs-notes .nt{transition:none}
 }
+
+/* quatro selos numa linha só no desktop */
+.grid--4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid--4 .card{padding:20px}
+.grid--4 h3{font-size:1.05rem}
