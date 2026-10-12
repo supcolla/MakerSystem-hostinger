@@ -76,7 +76,14 @@
     }
   }
 
-  /* 6. Telas acompanham o mouse (só com ponteiro fino) */
+  /* 6. Pixel da Meta: o clique em "Testar" vira um evento com a origem do botão (o cadastro em si é medido no aplicativo) */
+  d.querySelectorAll('a[data-ms="teste"]').forEach(a => a.addEventListener('click', () => {
+    if (typeof window.fbq !== 'function') return;
+    const seg = (d.querySelector('meta[name="ms-segmento"]') || {}).content || '';
+    fbq('trackCustom', 'ClicouTestar', { content_name: seg, content_category: 'vende-mais-segmento', origem: a.dataset.msOrigem || '' });
+  }));
+
+  /* 7. Telas acompanham o mouse (só com ponteiro fino) */
   if (!RM && matchMedia('(pointer: fine)').matches) {
     d.querySelectorAll('.figure').forEach(f => {
       f.addEventListener('pointerenter', () => { if (f.classList.contains('in')) f.classList.add('tilt'); });
