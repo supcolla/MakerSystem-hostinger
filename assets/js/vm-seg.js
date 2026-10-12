@@ -32,7 +32,7 @@
   }
 
   /* 2. A câmera: a tela do hero começa inclinada e se endireita conforme a rolagem */
-  const shot = d.querySelector('.shot-wrap .shot');
+  const shot = d.querySelector('.shot-wrap .laptop, .shot-wrap .shot');
   if (shot && !RM) {
     let tick = 0;
     const update = () => {
@@ -46,6 +46,15 @@
     addEventListener('resize', onScroll);
     update();
   } else if (shot) shot.style.setProperty('--sp', '0');
+
+  /* 2b. O sistema em uso: o vídeo só toca enquanto o notebook está na tela */
+  const vid = d.querySelector('.laptop__video');
+  if (vid && !RM) {
+    const play = () => { const r = vid.play(); if (r && r.catch) r.catch(() => {}); };
+    if (IO) watch([vid], e => { e.isIntersecting ? play() : vid.pause(); }, { threshold: 0.25 });
+    else play();
+    d.addEventListener('visibilitychange', () => { d.hidden ? vid.pause() : play(); });
+  }
 
   /* 3. Avisos que rodam por cima da tela */
   const notes = [...d.querySelectorAll('.vs-notes .nt')];
