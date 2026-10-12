@@ -90,3 +90,4 @@
 .js .shot-wrap--laptop .laptop{transform-origin:50% 0;transform:rotateX(calc(14deg*var(--sp,0))) translateY(calc(36px*var(--sp,0))) scale(calc(1 - .05*var(--sp,0)));transition:transform .12s linear;--sp:1}
 @media (max-width:640px){.hero--laptop{padding-bottom:28px}.laptop__screen{padding:8px 8px 10px;border-radius:12px 12px 4px 4px}.laptop__base{height:10px;margin:0 -3%}.shot-wrap--laptop .vs-notes{bottom:26px}}
 @media (prefers-reduced-motion:reduce){.js .shot-wrap--laptop .laptop{transform:none!important}}
+@media (max-width:640px){.shot-wrap--laptop .vs-notes{position:relative;left:auto;bottom:auto;width:100%;margin:14px auto 0}}
