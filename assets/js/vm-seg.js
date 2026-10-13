@@ -48,7 +48,9 @@
   } else if (shot) shot.style.setProperty('--sp', '0');
 
   /* 2b. O sistema em uso: cada vídeo só toca enquanto está na tela */
-  const vids = [...d.querySelectorAll('.laptop__video, .phone video')];
+  /* no celular, o celular pequeno ao lado do notebook fica na capa: ele mal aparece e custaria um vídeo a mais */
+  const mini = matchMedia('(max-width: 640px)').matches;
+  const vids = [...d.querySelectorAll('.laptop__video, .phone video')].filter(v => !(mini && v.closest('.shot-wrap--duo .phone')));
   if (vids.length && !RM) {
     const play = v => { const r = v.play(); if (r && r.catch) r.catch(() => {}); };
     const seen = new Set();
