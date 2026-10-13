@@ -47,13 +47,14 @@
     update();
   } else if (shot) shot.style.setProperty('--sp', '0');
 
-  /* 2b. O sistema em uso: o vídeo só toca enquanto o notebook está na tela */
-  const vid = d.querySelector('.laptop__video');
-  if (vid && !RM) {
-    const play = () => { const r = vid.play(); if (r && r.catch) r.catch(() => {}); };
-    if (IO) watch([vid], e => { e.isIntersecting ? play() : vid.pause(); }, { threshold: 0.25 });
-    else play();
-    d.addEventListener('visibilitychange', () => { d.hidden ? vid.pause() : play(); });
+  /* 2b. O sistema em uso: cada vídeo só toca enquanto está na tela */
+  const vids = [...d.querySelectorAll('.laptop__video, .phone video')];
+  if (vids.length && !RM) {
+    const play = v => { const r = v.play(); if (r && r.catch) r.catch(() => {}); };
+    const seen = new Set();
+    if (IO) watch(vids, e => { if (e.isIntersecting) { seen.add(e.target); play(e.target); } else { seen.delete(e.target); e.target.pause(); } }, { threshold: 0.25 });
+    else vids.forEach(play);
+    d.addEventListener('visibilitychange', () => { vids.forEach(v => (d.hidden || (IO && !seen.has(v))) ? v.pause() : play(v)); });
   }
 
   /* 3. Avisos que rodam por cima da tela */
@@ -94,7 +95,7 @@
 
   /* 7. Telas acompanham o mouse (só com ponteiro fino) */
   if (!RM && matchMedia('(pointer: fine)').matches) {
-    d.querySelectorAll('.figure').forEach(f => {
+    d.querySelectorAll('.figure, .device').forEach(f => {
       f.addEventListener('pointerenter', () => { if (f.classList.contains('in')) f.classList.add('tilt'); });
       f.addEventListener('pointermove', ev => {
         if (!f.classList.contains('tilt')) return;
