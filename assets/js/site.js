@@ -16,3 +16,11 @@
  document.querySelectorAll('.lgpd').forEach(el=>{if(!document.body.classList.contains('vende-premium')){el.remove();return;}try{if(localStorage.getItem('ms-privacy-notice')==='acknowledged')el.hidden=true;}catch{}el.querySelector('[data-lgpd-ok]')?.addEventListener('click',()=>{el.hidden=true;try{localStorage.setItem('ms-privacy-notice','acknowledged');}catch{}});});
  document.querySelectorAll('[data-instagram][href="#"]').forEach(el=>el.closest('li')?.remove());
 })();
+
+/* Menu "Soluções": fecha ao clicar fora ou com Esc */
+(() => {
+ const menus=[...document.querySelectorAll('details.nav-sol')];
+ if(!menus.length)return;
+ document.addEventListener('click',e=>{menus.forEach(m=>{if(m.open&&!m.contains(e.target))m.open=false;});});
+ document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;menus.forEach(m=>{if(m.open){m.open=false;m.querySelector('summary').focus();}});});
+})();

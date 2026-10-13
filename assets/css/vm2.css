@@ -106,3 +106,21 @@ table.t td.n{white-space:nowrap;text-align:right;font-weight:700}
 .tag{display:inline-block;font-size:.75rem;font-weight:700;background:var(--bg-soft);color:var(--ink-2);border-radius:999px;padding:3px 10px;margin-left:6px;vertical-align:middle}
 
 @media (max-width:420px){.t th,.t td{padding:10px 8px}.tag{margin-left:0}}
+/* Menu "Soluções" (13/10/2026): os segmentos do VENDE+, cada um com a sua página */
+.nav-sol{position:relative}
+.nav-sol>summary{list-style:none;cursor:pointer;color:#DCE6F5;font-size:.94rem;padding:8px 10px;border-radius:10px;user-select:none}
+.nav-sol>summary::-webkit-details-marker{display:none}
+.nav-sol>summary::after{content:"";display:inline-block;width:6px;height:6px;margin-left:8px;border:solid currentColor;border-width:0 1.6px 1.6px 0;transform:translateY(-3px) rotate(45deg);transition:transform .15s}
+.nav-sol[open]>summary::after{transform:translateY(1px) rotate(-135deg)}
+.nav-sol>summary:hover,.nav-sol[open]>summary,.nav-sol--on>summary{color:#fff;background:rgba(255,255,255,.08)}
+.nav-sol>summary:focus-visible{outline:2px solid #18D64A;outline-offset:2px}
+.nav-sol__menu{position:absolute;z-index:60;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:max-content;min-width:480px;
+  display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:10px;background:#fff;border-radius:14px;box-shadow:0 24px 50px -18px rgba(4,23,58,.45),0 0 0 1px rgba(4,23,58,.06)}
+.hd nav .nav-sol__menu a{color:#0B1F44;font-size:.93rem;padding:10px 12px;border-radius:9px;white-space:nowrap}
+.hd nav .nav-sol__menu a:hover,.hd nav .nav-sol__menu a[aria-current]{color:#04173A;background:#EEF3FB}
+.hd nav .nav-sol__menu a[aria-current]{font-weight:600}
+@media (max-width:900px){
+  .nav-sol__menu{position:static;transform:none;width:auto;min-width:0;grid-template-columns:1fr;margin:2px 0 6px;padding:4px 0 4px 10px;background:none;box-shadow:none;border-left:2px solid rgba(255,255,255,.12);border-radius:0}
+  .hd nav .nav-sol__menu a{color:#DCE6F5;white-space:normal}
+  .hd nav .nav-sol__menu a:hover,.hd nav .nav-sol__menu a[aria-current]{color:#fff;background:rgba(255,255,255,.08)}
+}
