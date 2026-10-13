@@ -77,17 +77,59 @@
 .grid--4 .card{padding:20px}
 .grid--4 h3{font-size:1.05rem}
 
-/* notebook com o sistema em uso (vídeo gravado da demo) */
-.hero--laptop{padding-bottom:48px}
-.shot-wrap--laptop{max-width:1040px}
+/* ===== Mockups: notebook e celular com o VENDE+ em uso (vídeos gravados da demo) ===== */
+.hero--laptop{padding-bottom:72px}
+.shot-wrap--laptop{max-width:1060px;padding:0 4%}
 .laptop{position:relative;margin:0 auto;width:100%}
-.laptop__screen{position:relative;background:#0b0f17;border-radius:18px 18px 6px 6px;padding:14px 14px 18px;box-shadow:0 30px 70px -20px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08) inset}
-.laptop__screen::before{content:"";position:absolute;left:50%;top:5px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#1f2937;box-shadow:0 0 0 2px #111827}
-.laptop__video,.laptop__img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#fff;border-radius:6px}
-.laptop__base{position:relative;margin:0 -4%;height:16px;background:linear-gradient(#e5e9f0,#aab3c2);border-radius:0 0 16px 16px;box-shadow:0 18px 30px -14px rgba(0,0,0,.55)}
-.laptop__base::before{content:"";position:absolute;left:50%;top:0;width:14%;height:5px;margin-left:-7%;background:#8b94a5;border-radius:0 0 6px 6px}
-.shot-wrap--laptop .vs-notes{left:-1%;bottom:44px}
+.laptop__screen{position:relative;background:#050608;border-radius:clamp(10px,1.8vw,22px) clamp(10px,1.8vw,22px) 0 0;padding:2.1% 2.1% 2.7%;
+  box-shadow:0 0 0 1px #9aa1ac,0 0 0 clamp(2px,.28vw,4px) #d6dae0,inset 0 0 0 1px rgba(255,255,255,.07),0 50px 90px -40px rgba(0,0,0,.75)}
+.laptop__screen::before{content:"";position:absolute;left:50%;top:.8%;width:.62%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#3e4a5c,#0b0e13 70%);box-shadow:0 0 0 2px #0f1217;z-index:2}
+.laptop__screen::after{content:"";position:absolute;left:2.1%;right:2.1%;top:2.1%;bottom:2.7%;border-radius:3px;pointer-events:none;
+  background:linear-gradient(118deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.04) 22%,rgba(255,255,255,0) 38%)}
+.laptop__video,.laptop__img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#fff;border-radius:3px}
+.laptop__base{position:relative;z-index:1;margin:0 -7%;height:0;padding-bottom:2.5%;
+  background:linear-gradient(180deg,#f3f5f7 0%,#e2e5ea 28%,#bfc4cc 68%,#8f959f 100%);border-radius:3px 3px 50% 50%/3px 3px 100% 100%;
+  box-shadow:inset 0 1px 0 #fbfcfd,0 28px 40px -18px rgba(0,0,0,.65)}
+.laptop__base::before{content:"";position:absolute;left:50%;top:0;width:15%;height:40%;transform:translateX(-50%);
+  background:linear-gradient(180deg,#b3b8c0,#dadde2);border-radius:0 0 12px 12px}
+.laptop__base::after{content:"";position:absolute;left:10%;right:10%;bottom:-20px;height:20px;border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.42),rgba(0,0,0,0) 70%);filter:blur(5px)}
 .js .shot-wrap--laptop .laptop{transform-origin:50% 0;transform:rotateX(calc(14deg*var(--sp,0))) translateY(calc(36px*var(--sp,0))) scale(calc(1 - .05*var(--sp,0)));transition:transform .12s linear;--sp:1}
-@media (max-width:640px){.hero--laptop{padding-bottom:28px}.laptop__screen{padding:8px 8px 10px;border-radius:12px 12px 4px 4px}.laptop__base{height:10px;margin:0 -3%}.shot-wrap--laptop .vs-notes{bottom:26px}}
-@media (prefers-reduced-motion:reduce){.js .shot-wrap--laptop .laptop{transform:none!important}}
-@media (max-width:640px){.shot-wrap--laptop .vs-notes{position:relative;left:auto;bottom:auto;width:100%;margin:14px auto 0}}
+.shot-wrap--laptop .vs-notes{left:0;bottom:56px}
+
+/* celular */
+.phone{position:relative;width:100%;max-width:290px;margin:0 auto;border-radius:15.5%/7.3%;padding:3.3%;
+  background:linear-gradient(150deg,#59606b 0%,#22262c 16%,#0d0f12 48%,#20242a 84%,#5f6570 100%);
+  box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.2),inset 0 0 0 4px #090a0c,0 44px 70px -30px rgba(4,23,58,.6),0 18px 30px -18px rgba(0,0,0,.5)}
+.phone::before{content:"";position:absolute;right:-1.3%;top:27%;width:1.5%;height:10.5%;border-radius:0 3px 3px 0;background:linear-gradient(90deg,#262a30,#646a75)}
+.phone::after{content:"";position:absolute;left:-1.3%;top:18%;width:1.5%;height:19%;border-radius:3px 0 0 3px;
+  background:linear-gradient(180deg,#646a75 0 13%,transparent 13% 24%,#646a75 24% 58%,transparent 58% 64%,#646a75 64% 100%)}
+.phone__screen{position:relative;overflow:hidden;border-radius:12.4%/5.7%;background:#fff;aspect-ratio:780/1776;isolation:isolate}
+.phone__screen video,.phone__screen img{display:block;width:100%;height:100%;object-fit:cover}
+.phone__island{position:absolute;z-index:2;top:1.1%;left:50%;width:30%;height:2.85%;transform:translateX(-50%);background:#000;border-radius:999px}
+.phone__screen::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 30%)}
+.device{margin:0 auto;max-width:300px}
+.js .device[data-r]{transform:perspective(1200px) rotateY(-16deg) rotateX(4deg) translateY(44px) scale(.96);transition-duration:1s,1.2s}
+.js .device[data-r].in{transform:perspective(1200px) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg))}
+.js .device.in .phone{animation:vs-float 6.5s ease-in-out 1.2s infinite}
+
+/* notebook + celular no hero */
+.shot-wrap--duo .phone{position:absolute;z-index:3;right:0;bottom:-34px;width:21%;max-width:none}
+.js .shot-wrap--duo .phone{animation:vs-float 6.5s ease-in-out 1.8s infinite}
+
+@media (max-width:640px){
+  .hero--laptop{padding-bottom:30px}
+  .laptop__base{margin:0 -5%;padding-bottom:3%}
+  .shot-wrap--laptop .vs-notes{position:relative;left:auto;bottom:auto;width:100%;margin:18px auto 0}
+  .shot-wrap--duo .phone{width:30%;right:-1%;bottom:-16px}
+}
+@media (prefers-reduced-motion:reduce){
+  .js .shot-wrap--laptop .laptop{transform:none!important}
+  .js .device.in .phone,.js .shot-wrap--duo .phone{animation:none}
+}
+/* nada passa da largura da tela: colunas da grade podem encolher e tabelas rolam dentro do cartão */
+.split>*{min-width:0}
+.card:has(> table.t){overflow-x:auto}
+@media (max-width:640px){.shot-wrap--duo .vs-notes{display:none}}
