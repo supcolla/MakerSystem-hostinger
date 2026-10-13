@@ -133,3 +133,9 @@
 .split>*{min-width:0}
 .card:has(> table.t){overflow-x:auto}
 @media (max-width:640px){.shot-wrap--duo .vs-notes{display:none}}
+/* Notebook dentro das seções (13/10/2026): a função mostrada no computador, ao lado do texto */
+.device--laptop{max-width:none;padding:0 6% 26px}
+.split:has(.device--laptop){grid-template-columns:.8fr 1.2fr}
+.js .device--laptop[data-r]{transform:perspective(1400px) rotateX(10deg) translateY(44px) scale(.96)}
+.js .device--laptop[data-r].in{transform:perspective(1400px) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg))}
+@media (max-width:860px){.split:has(.device--laptop){grid-template-columns:1fr}.device--laptop{padding:0 5% 22px}}
