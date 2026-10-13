@@ -116,11 +116,23 @@ table.t td.n{white-space:nowrap;text-align:right;font-weight:700}
 .nav-sol>summary:focus-visible{outline:2px solid #18D64A;outline-offset:2px}
 .nav-sol__menu{position:absolute;z-index:60;top:calc(100% + 10px);left:50%;transform:translateX(-50%);width:max-content;min-width:480px;
   display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:10px;background:#fff;border-radius:14px;box-shadow:0 24px 50px -18px rgba(4,23,58,.45),0 0 0 1px rgba(4,23,58,.06)}
-.hd nav .nav-sol__menu a{color:#0B1F44;font-size:.93rem;padding:10px 12px;border-radius:9px;white-space:nowrap}
+.hd nav .nav-sol__menu a,.nav-sol__soon{display:flex;align-items:center;gap:12px;color:#0B1F44;font-size:.93rem;padding:10px 12px;border-radius:9px;white-space:nowrap}
+.nav-sol__ic{flex:none;width:21px;height:21px;fill:none;stroke:#1554C5;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.nav-sol__soon{color:#7A879C;cursor:default}
+.nav-sol__soon .nav-sol__ic{stroke:#A7B2C4}
+.nav-sol__soon em{margin-left:auto;font-style:normal;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#1554C5;background:#E9F0FC;padding:3px 7px;border-radius:999px}
 .hd nav .nav-sol__menu a:hover,.hd nav .nav-sol__menu a[aria-current]{color:#04173A;background:#EEF3FB}
 .hd nav .nav-sol__menu a[aria-current]{font-weight:600}
 @media (max-width:900px){
   .nav-sol__menu{position:static;transform:none;width:auto;min-width:0;grid-template-columns:1fr;margin:2px 0 6px;padding:4px 0 4px 10px;background:none;box-shadow:none;border-left:2px solid rgba(255,255,255,.12);border-radius:0}
-  .hd nav .nav-sol__menu a{color:#DCE6F5;white-space:normal}
+  .hd nav .nav-sol__menu a,.nav-sol__soon{color:#DCE6F5;white-space:normal}
+  .nav-sol__ic{stroke:#7FB0FF}
+  .nav-sol__soon{color:#8C9BB5}.nav-sol__soon .nav-sol__ic{stroke:#5E6E8A}
+  .nav-sol__soon em{color:#BFD3F5;background:rgba(255,255,255,.08)}
   .hd nav .nav-sol__menu a:hover,.hd nav .nav-sol__menu a[aria-current]{color:#fff;background:rgba(255,255,255,.08)}
 }
+/* Assinatura da marca (13/10/2026): VENDE+ sempre com "by MakerSystem" embaixo */
+.vm-lockup{display:inline-flex;flex-direction:column;align-items:center;line-height:1;vertical-align:middle}
+.vm-lockup img{display:block}
+.vm-by{display:block;margin-top:5px;padding-left:.24em;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#A9B8CF;white-space:nowrap}
+.hd .vm-by{font-size:7.5px;margin-top:3px}

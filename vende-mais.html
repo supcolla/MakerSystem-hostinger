@@ -756,6 +756,13 @@ h1 .hl{color:var(--green-bright)}
 .seg a:hover{background:rgba(255,255,255,.10);color:#fff}
 .seg a[aria-current="page"]{background:var(--green);color:var(--navy);border-color:var(--green)}
 @media (min-width:861px){.site-footer .cols--5{grid-template-columns:1.35fr repeat(4,1fr)}}
+/* Assinatura da marca (13/10/2026): VENDE+ sempre com "by MakerSystem" embaixo */
+.vm-lockup{display:inline-flex;flex-direction:column;align-items:center;line-height:1;vertical-align:middle}
+.vm-lockup img{display:block}
+.vm-by{display:block;margin-top:5px;padding-left:.24em;font-family:Inter,system-ui,sans-serif;font-weight:600;font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:#A9B8CF;white-space:nowrap}
+.hd .vm-by{font-size:7.5px;margin-top:3px}
+.brand .vm-by{font-size:8.5px;margin-top:4px}
+.site-footer .vm-lockup{margin-bottom:var(--s2)}.site-footer .vm-lockup .logo{margin-bottom:0}
 </style>
 <link rel="stylesheet" href="/assets/css/premium.css?v=45c53f057a42">
 <link rel="stylesheet" href="/assets/css/vende-editorial.css?v=029075846996">
@@ -785,7 +792,7 @@ h1 .hl{color:var(--green-bright)}
 <header class="site-header">
   <div class="wrap bar">
     <a class="brand" href="#topo" aria-label="VENDE+ by Maker System — sistema de gestão e PDV para lojas">
-      <img src="/img/vendemais-logo-branco.png?v=9a2b085a481f" alt="VENDE+" width="107" height="36">
+      <span class="vm-lockup"><img src="/img/vendemais-logo-branco.png?v=9a2b085a481f" alt="VENDE+" width="107" height="36"><span class="vm-by">by MakerSystem</span></span>
       <span class="sub">Sistema de gestão e PDV para lojas</span>
     </a>
     <nav class="nav" aria-label="Seções da página">
@@ -820,7 +827,7 @@ h1 .hl{color:var(--green-bright)}
   <div class="wrap">
     <div class="cols cols--5">
       <div>
-        <img class="logo" src="/img/vendemais-logo-branco.png?v=9a2b085a481f" alt="VENDE+" width="120" height="38">
+        <span class="vm-lockup"><img class="logo" src="/img/vendemais-logo-branco.png?v=9a2b085a481f" alt="VENDE+" width="120" height="38"><span class="vm-by">by MakerSystem</span></span>
         <p>Sistema de gestão e PDV para lojas que não para no cupom: ele diz qual cliente chamar hoje, o que oferecer e por quê.</p>
       </div>
       <div>
