@@ -33,6 +33,7 @@
 - [Sistema para supermercado e mercearia](https://makersystem.com.br/vende-mais-supermercado/): PDV com leitor, açougue e hortifruti por peso, NFC-e, XML, curva ABC, fiado
 - [Sistema para perfumaria e cosméticos](https://makersystem.com.br/vende-mais-perfumaria-cosmeticos/): recompra, presente, CEST conferido, catálogo online
 - [Sistema para materiais de construção](https://makersystem.com.br/vende-mais-materiais-construcao/): m², m³, metro e milheiro, quantidade fracionada, orçamento de obra
+- [Sistema para casa agropecuária](https://makersystem.com.br/vende-mais-casa-agropecuaria/): balcão, orçamento pelo WhatsApp, entrega, recompra de ração e sal mineral, crediário
 - [Emissor de NF-e e NFC-e](https://makersystem.com.br/vende-mais/nota-fiscal/): módulo Fiscal, MDE, Portal do Contador
 - [Preços](https://makersystem.com.br/vende-mais/precos/): tabela de módulos e planos por tipo de loja
 - [Trocar de sistema](https://makersystem.com.br/vende-mais/migrar/): como migrar os dados
