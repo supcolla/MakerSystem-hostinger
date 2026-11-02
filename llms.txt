@@ -37,6 +37,7 @@
 - [Emissor de NF-e e NFC-e](https://makersystem.com.br/vende-mais/nota-fiscal/): módulo Fiscal, MDE, Portal do Contador
 - [Preços](https://makersystem.com.br/vende-mais/precos/): tabela de módulos e planos por tipo de loja
 - [Trocar de sistema](https://makersystem.com.br/vende-mais/migrar/): como migrar os dados
+- [Revenda para contabilidades](https://makersystem.com.br/vende-mais/revenda/): 60% do valor pago pelo cliente, todo mês; suporte com a Maker System; calculadora de ganhos
 - [Perguntas frequentes](https://makersystem.com.br/vende-mais/perguntas/)
 - [Sobre a Maker System](https://makersystem.com.br/sobre/)
 - [Entrar ou criar conta](https://vendemais.makersystem.com.br/)
