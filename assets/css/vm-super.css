@@ -1,0 +1,7 @@
+/* VENDE+ · LP de supermercado: vídeos verticais das funções e o vídeo com narração */
+.sp-clip,.sp-reel{margin:0 auto;width:100%;max-width:340px;border-radius:24px;overflow:hidden;background:#04173A;box-shadow:var(--sh);border:1px solid var(--line)}
+.sp-clip video,.sp-reel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.sp-reel{max-width:360px}
+#video .btn{margin-top:8px}
+html{scroll-padding-top:84px}
+@media (max-width:860px){.sp-clip,.sp-reel{max-width:300px}}
